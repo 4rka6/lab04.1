@@ -1,0 +1,5 @@
+/home/apkent/apkent/workspace/projects/lab04.1/build/CMakeFiles/print.dir
+/home/apkent/apkent/workspace/projects/lab04.1/build/CMakeFiles/example1.dir
+/home/apkent/apkent/workspace/projects/lab04.1/build/CMakeFiles/example2.dir
+/home/apkent/apkent/workspace/projects/lab04.1/build/CMakeFiles/edit_cache.dir
+/home/apkent/apkent/workspace/projects/lab04.1/build/CMakeFiles/rebuild_cache.dir
