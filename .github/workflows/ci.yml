@@ -7,11 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build with gcc
+      - name: Build
         run: |
-          rm -rf build
-          mkdir build
-          cd build
+          mkdir build && cd build
           cmake .. -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
           cmake --build .
 
@@ -19,11 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build with clang
+      - name: Build
         run: |
-          rm -rf build
-          mkdir build
-          cd build
+          mkdir build && cd build
           cmake .. -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
           cmake --build .
 
@@ -31,9 +27,8 @@ jobs:
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
-      - name: Build on Windows
+      - name: Build
         run: |
-          Remove-Item -Recurse -Force build -ErrorAction SilentlyContinue
           mkdir build
           cd build
           cmake .. -G "Visual Studio 17 2022" -A x64
