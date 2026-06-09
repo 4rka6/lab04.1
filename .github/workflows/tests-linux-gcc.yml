@@ -1,13 +1,14 @@
-name: Linux GCC
+name: tests
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  gcc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: |
+          rm -rf build
           mkdir build && cd build
-          cmake .. -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+          cmake ..
           cmake --build .
